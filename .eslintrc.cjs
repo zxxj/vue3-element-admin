@@ -35,5 +35,7 @@ module.exports = {
      * warn或1: 开启规则,错误时会发生警告,但不会导致程序退出
      * error或2: 开启规则,错误时会导致程序退出
      */
+
+    'vue/multi-word-component-names': 0
   }
 }
