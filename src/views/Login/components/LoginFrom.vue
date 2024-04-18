@@ -5,7 +5,11 @@
 			size="small">
 
 			<el-form-item label="用户名:" prop="username">
-				<el-input v-model="form.username" />
+				<el-input v-model="form.username">
+					<template #prefix>
+						<svg-icon icon="https://res.lgdsunday.club/user.svg" />
+					</template>
+				</el-input>
 			</el-form-item>
 
 			<el-form-item label="密码:" prop="password">
@@ -25,6 +29,7 @@
 import { reactive, ref } from "vue"
 import type { LoginFromType, RuleForm } from "@/types/LoginFrom"
 import type { FormProps, FormInstance, FormRules } from 'element-plus'
+import SvgIcon from "@/components/SvgIcon/index.vue"
 
 // 登录表单实例
 const loginFromRef = ref<FormInstance>()
